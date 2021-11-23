@@ -1,12 +1,12 @@
 import React from "react";
 import DbsDemo from "./components/DbsDemo";
 import Login from "./components/Login";
+import Routes from "./Routes";
 
 const App = () => {
   return (
     <div>
-      <Login />
-      <DbsDemo />
+      <Routes />
     </div>
   );
 }

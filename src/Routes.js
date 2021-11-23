@@ -10,7 +10,6 @@ const Routes = () => {
             <div>
                 <Router>
                     <div>
-                        <Header />
                         <div>
                             <Switch>
                                 <Route exact path="/"> <Login /> </Route>

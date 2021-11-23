@@ -32,16 +32,18 @@ const Login = () => {
     };
 
     const submitAppUser = (event) => {
-        if (appUser.user === event.data.user && appUser.password === event.data.password) {
-            axios.post(`http://localhost:8082/login`, appUser)
-                .then((response) => {
-                    console.log(response.data);
-                    localStorage.setItem(appUser); // important 
-                    history.push('/dbsdemo');
-                }).catch((error) => {
-                    console.log(error.message)
-                });
-        }
+        console.log(appUser.user);
+        console.log(appUser.password);
+        // if (appUser.user === event.data.user && appUser.password === event.data.password) {
+        axios.post(`http://localhost:8082/login`, appUser)
+            .then((response) => {
+                console.log(response.data);
+                localStorage.setItem(appUser); // important 
+                history.push('/dbsdemo');
+            }).catch((error) => {
+                console.log(error.message)
+            });
+        // }
         event.preventDefault();
     }
     return (
